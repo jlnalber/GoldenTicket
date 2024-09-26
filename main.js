@@ -98,7 +98,7 @@ function maleKartenInContentDiv(contentDiv, selector) {
             kDiv.ondblclick = () => {
                 karte.benutzt = !karte.benutzt;
                 saveKarten();
-                maleKartenInContentDiv(centerDiv, selector);
+                maleKartenInContentDiv(contentDiv, selector);
             };
             const title = document.createElement('h2');
             title.classList.add('title');
