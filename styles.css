@@ -1,0 +1,210 @@
+body,
+html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+
+  font-family: "Trebuchet MS", sans-serif;
+  -webkit-user-select: none;
+  user-select: none;
+
+  --header-height: 70px;
+  --header-button-height: 37px;
+  --header-top-margin: calc(
+    (var(--header-height) - var(--header-button-height)) / 2
+  );
+  --button-pading: 7px;
+
+  background-color: #fff7f2;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.header,
+.footer {
+  width: 100%;
+  height: var(--header-height);
+}
+
+.content,
+.newPageContent {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.content {
+  height: calc(100% - var(--header-height));
+}
+
+.newPageContent {
+  height: calc(100% - 2 * var(--header-height));
+}
+
+button {
+  background-color: #805030;
+  border: 1px solid #805030;
+  height: var(--header-button-height);
+  color: #fff7f2;
+  border-radius: 50vh;
+  padding-left: var(--button-pading);
+  padding-right: var(--button-pading);
+}
+
+button:hover {
+  background-color: #634734;
+}
+
+button:focus {
+  background-color: #6b3714;
+}
+
+.floatRight {
+  margin-top: var(--header-top-margin);
+  margin-right: var(--header-top-margin);
+  float: right;
+}
+
+select, .floatLeft {
+  margin-top: var(--header-top-margin);
+  margin-left: var(--header-top-margin);
+}
+
+select,
+.lightButton {
+  background-color: #fff7f2;
+  border-radius: 50vh;
+  border: 1px solid #b3917c;
+  height: var(--header-button-height);
+  padding-left: var(--button-pading);
+  padding-right: var(--button-pading);
+}
+
+.lightButton {
+  color: #885739;
+}
+
+select:hover,
+.lightButton:hover {
+  background-color: #ffe7d8;
+}
+
+select:focus,
+.lightButton:focus {
+  background-color: #ffd2b6;
+}
+
+.centerText {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 100%;
+  color: #885739;
+  font-size: 15pt;
+}
+
+.centerContent {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.inpButton {
+  position: relative;
+
+}
+
+#inp {
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.karte {
+    margin-top: 15px;
+    width: max-content;
+    padding: 15px;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.addButton {
+    margin-top: 15px;
+}
+
+.karte *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.karte:last-child {
+    margin-bottom: 15px;
+}
+
+.karte.benutzt {
+    box-shadow: 0px 0px 15px gray;
+    background-color: gray;
+}
+
+.karte.unbenutzt {
+    box-shadow: 0px 0px 15px #775744;
+    background-color: coral;
+}
+
+.centerContentInnerDiv {
+    display: inline-block;
+}
+
+.karte input[type=text] {
+    --border-size: 1px;
+    background-color: transparent;
+}
+
+.karte.unbenutzt, .karte.unbenutzt input[type=text] {
+    color: #684835;
+}
+
+.karte.benutzt, .karte.benutzt input[type=text] {
+    color: #fff7f2;
+}
+
+.karte input[type=text] {
+    --padding: 7px;
+    border-radius: 50vh;
+    padding: var(--padding);
+    width: calc(100% - 2 * var(--padding) - var(--border-size));
+}
+
+.karte .titleInput {
+    font-size: 17pt;
+}
+
+.karte.benutzt input[type=text] {
+    border: var(--border-size) solid darkgray;
+}
+
+.karte.unbenutzt input[type=text] {
+    border: var(--border-size) solid #b3917c;
+}
+
+.karte .title {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
